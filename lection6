@@ -29,5 +29,5 @@ counter.increase().increase().increase().decrease().getCount();
   return function(y){
     return x+y
   }
-}
- sum(2)(3);:
+} 
+ sum(2)(3);h
