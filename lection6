@@ -1,0 +1,33 @@
+1.function f() {
+  console.log( this );
+}
+let user = {
+  g: f.bind(null),
+  arrowFunc: () => console.log(this)
+};
+user.g(); —-  теж глобальне значення зіс (віндовс) буде виведене бо тут ми виводимо функцію f яка виводить this яке посилається на глобальний об*єкт
+user.arrowFunc();--- тут буде виведене глобальне значення this бо стрілочні функції не змінюють this, вони беруть його з контексту.
+
+
+2. const counter = { 
+count: 0,
+increase() { 
+this.count ++;
+return this;
+} ,
+decrease() { 
+ this.count --;
+return this;
+},
+getCount(){ 
+this.count ;
+return this;
+ }, }
+counter.increase().increase().increase().decrease().getCount();
+
+ 3. function sum(x){
+  return function(y){
+    return x+y
+  }
+}
+ sum(2)(3);
