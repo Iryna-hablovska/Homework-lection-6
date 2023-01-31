@@ -28,6 +28,6 @@ counter.increase().increase().increase().decrease().getCount();
  3. function sum(x){
   return function(y){
     return x+y
-  }
+  } 
 } 
- sum(2)(3);h
+ sum(2)(3); 
