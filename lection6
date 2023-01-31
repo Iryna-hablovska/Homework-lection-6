@@ -9,7 +9,7 @@ user.g(); —-  теж глобальне значення зіс (віндов�
 user.arrowFunc();--- тут буде виведене глобальне значення this бо стрілочні функції не змінюють this, вони беруть його з контексту.
 
 
-2. const counter = { 
+2.. const counter = { 
 count: 0,
 increase() { 
 this.count ++;
@@ -25,9 +25,9 @@ return this;
  }, }
 counter.increase().increase().increase().decrease().getCount();
 
- 3. function sum(x){
+ 3.. function sum(x){
   return function(y){
     return x+y
   } 
-} 
+}  
  sum(2)(3); 
